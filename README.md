@@ -18,11 +18,12 @@
     - [Cost calculators](#cost-calculators)
     - [Logging / Monitoring / Performance / Tracing](#logging--monitoring--performance--tracing)
     - [Authentication and authorization](#authentication-and-authorization)
+    - [IAM](#iam)
     - [Payments](#payments)
     - [eCommerce](#ecommerce)
     - [Content Management Systems](#content-management-systems)
     - [Forms](#forms)
-    - [Image management and File storage](#image-management-and-file-storage)
+    - [Media management and File storage](#media-management-and-file-storage)
     - [Realtime](#realtime)
     - [Scheduling](#scheduling)
     - [Email sending, subscriptions and newsletters](#email-sending-subscriptions-and-newsletters)
@@ -39,6 +40,7 @@
     - [Videos from conferences](#videos-from-conferences)
     - [Contributing](#contributing)
     - [License](#license)
+    - [Serverless Manifiesto](#serverless-manifiesto)
 
 ### What is "serverless" computing?
 > The phrase “serverless” doesn’t mean servers are no longer involved. It simply means that developers no longer have to think "that much" about them. Computing resources get used as services without having to manage around physical capacities or limits.
@@ -58,12 +60,15 @@ https://www.quora.com/What-is-serverless-computing
 * [Para](https://paraio.com) - Flexible and lightweight backend service for rapid prototyping, based on open source software.
 * <s>[Backand](https://www.backand.com)</s> - One platform to develop and run multi-cloud Serverless applications.
 * [wolkenkit](https://www.wolkenkit.io) - wolkenkit is a CQRS and event-sourcing framework for JavaScript and Node.js which fits perfectly with domain-driven design (DDD).
+* [Kuzzle](https://kuzzle.io) - High performance cloud agnostic backend solution including persistence, authentication, realtime database and geofencing with a full featured cluster mode.
+* [serverless-cqrs](https://www.serverless-cqrs.com) - A collection tools to help you build a fully functioning backend based on the principles of CQRS, Event Sourcing, Domain Driven Design, and Onion Architecture.
 
 ### Hosting and code execution in the cloud
+* [FaaStRuby](https://faastruby.io) - Serverless Software Development Platform for Ruby and Crystal developers.
 * [Amazon Lambda](https://aws.amazon.com/lambda) - Run code without thinking about servers. Pay for only the compute time you consume.
 * [Google Cloud Functions](https://cloud.google.com/functions/docs) - Lightweight, event-based, asynchronous compute solution that allows you to create small, single-purpose functions that respond to cloud events without the need to manage a server or a runtime environment.
 * [MongoDB Stitch](https://www.mongodb.com/cloud/stitch) - Serverless platform from MongoDB.
-* [Spotinst Functions](https://spotinst.com/products/spotinst-functions/) - Devploy serverless functions with our easy to use framework that launch onto the Spot Market for cheap and convenient use.
+* [Spotinst Functions](https://spotinst.com/products/spotinst-functions/) - Deploy serverless functions with our easy to use framework that launch onto the Spot Market for cheap and convenient use.
 * [Azure Functions](https://azure.microsoft.com/en-us/services/functions) - Listen and react to events across your stack.
 * [Fission](http://fission.io) - Fast, extensible, open source serverless functions on any Kubernetes cluster
 * [IBM Cloud Functions](https://console.bluemix.net/openwhisk/) - Distributed compute service to execute application logic in response to events.
@@ -82,66 +87,77 @@ https://www.quora.com/What-is-serverless-computing
 * [Effe](https://github.com/siscia/effe) - a simple Open Source building block to emulate AWS Lambda.
 * [Lever OS](https://github.com/leveros/leveros) - Serverless + Microservices = ♥
 * [Now](https://zeit.co/now) - realtime node.js deployments
-* [OpenComponents](https://github.com/opentable/oc) - Serverless microservices for front-end components
+* [OpenComponents](https://github.com/opentable/oc) - Serverless microservices for front-end components.
 * <s>[Kloudbit](http://www.kloudbit.com/)</s> - Kloudbit helps developers build robust applications without the hassle of backend coding and server management.
-* [Stackery](https://www.stackery.io/) - Stackery enables teams of developers to design, deploy, and monitor their serverless infrastructure on cloud services providers like AWS
+* [OpenFaaS Cloud](https://github.com/openfaas/openfaas-cloud) - OpenFaaS Cloud: multi-user serverless functions driven by git.
+* [Stackery](https://www.stackery.io/) - Stackery enables teams of developers to design, deploy, and monitor their serverless infrastructure on cloud services providers like AWS.
 * [Algorithmia](https://algorithmia.com/) - Automating the use of AI/ML models at every scale with the Serverless AI Layer.
-* [TriggerMesh](https://www.triggermesh.com) - Serverless Management Platform with advanced event triggers
+* [TriggerMesh](https://www.triggermesh.com) - Serverless Management Platform with advanced event triggers.
+* [Cloudflare Workers](https://www.cloudflareworkers.com) - Workers allow you to deploy Serverless apps to 165+ data centers across the globe simultaneously, along with the ability to agument or alter exsisting websites and APIs on the fly.
 
 ### Isomorphic Engines
 * [lychee.js](https://github.com/Artificial-Engineering/lycheejs) - Isomorphic adapters allow peer-to-peer event-graphed WebSockets and HTTP1.1, SPDY and HTTP2.0 sockets for node, node-sdl, html, html-nwjs and html-webview (both native and embedded).
 
 ### Frameworks
-* [Aegis](https://github.com/tmaiaroto/aegis) - A Golang serverless application development framework for AWS with deploy tool
+* [Aegis](https://github.com/tmaiaroto/aegis) - A Golang serverless application development framework for AWS with deploy tool.
 * [Apex](http://apex.run) - Minimal AWS Lambda function manager with support for multiple languages including Nodejs, Golang, Python, Java, Rust and Clojure.
-* [Architect](http://arc.codes) - Provision and deploy from a super simple plaintext manifest
+* [Architect](http://arc.codes) - Provision and deploy from a super simple plaintext manifest.
 * [AWS Amplify](https://aws-amplify.github.io/) - A declarative JavaScript library for application development using cloud services.
 * [Up](https://up.docs.apex.sh/) - Deploy infinitely scalable serverless apps, apis, and sites in seconds.
-* [Chalice](https://github.com/awslabs/chalice) - Python serverless microframework from Amazon for AWS lambda
+* [Chalice](https://github.com/awslabs/chalice) - Python serverless microframework from Amazon for AWS lambda.
 * [CIM](https://github.com/thestackshack/cim) - A CloudFormation first approach to AWS Lambdas.
 * [ClaudiaJS](https://github.com/claudiajs/claudia) - Deploy Node.js microservices to AWS easily.
 * [DEEP](https://github.com/MitocGroup/deep-framework) - Full-stack Web Framework for Cloud-Native Applications and Platforms using Microservices Architecture.
 * [flowbject](https://github.com/alex20465/flowbject) - A high-level library whose aim is to help with writing state-machine flows.
 * [FunctionShield](https://www.puresec.io/function-shield) - A security library that equips developers with the ability to easily enforce strict security controls on AWS Lambda function runtime by addressing 3 common use cases: 1) Disable outbound internet connectivity. 2) Disable read/write on the /tmp/ directory 3) Disable child process execution.
-* [Gordon](https://github.com/jorgebastida/gordon) - λ Gordon is a tool to create, wire and deploy AWS Lambdas using CloudFormation
+* [Gordon](https://github.com/jorgebastida/gordon) - λ Gordon is a tool to create, wire and deploy AWS Lambdas using CloudFormation.
 * [Gestalt Framework](http://www.galacticfog.com/product.html) - Gestalt's Lambda Application SERver (LASER)” for short, is a lambda service that supports running .Net, Javascript, Java, Scala, Ruby, and Python lambdas.
-* [IronFunctions](https://github.com/iron-io/functions) - The Serverless Microservices platform
+* [IronFunctions](https://github.com/iron-io/functions) - The Serverless Microservices platform.
+* [Jets](https://github.com/tongueroo/jets) - Ruby Serverless Framework for AWS. Jets allows you to create serverless applications with a beautiful language: Ruby. It includes everything required to build an application and deploy it to AWS Lambda.
 * [Kappa](https://github.com/garnaat/kappa) - a command line tool that (hopefully) makes it easier to deploy, update, and test functions for AWS Lambda.
-* [Lambda API](https://github.com/jeremydaly/lambda-api) - Lightweight web framework for your serverless applications
+* [Lambda API](https://github.com/jeremydaly/lambda-api) - Lightweight web framework for your serverless applications.
 * [Lambda Forest](https://github.com/tdsis/lambda-forest) - Microframework that makes it easier to develop REST API's using AWS Lambda Function and API Gateway.
 * [Lambada Framework](https://github.com/lambadaframework/lambadaframework) - JAX-RS implementation for AWS Lambda.
 * [lambda-restify](https://github.com/kksharma1618/lambda-restify) - A restify/expressjs like interface for aws lamda with api gateway event.
-* [Lambdoku](https://github.com/kubek2k/lambdoku) - Heroku-like experience when using AWS Lambda
-* [middy](https://middy.js.org/) - Node.js middleware engine for AWS Lambda
+* [Lambdoku](https://github.com/kubek2k/lambdoku) - Heroku-like experience when using AWS Lambda.
+* [middy](https://middy.js.org/) - Node.js middleware engine for AWS Lambda.
 * [modofun](https://github.com/fptavares/modofun) - A lightweight no-dependencies function router for both AWS Lambda and Google Cloud Functions, and that supports Connect/Express middleware.
+* [OpenFaaS](https://docs.openfaas.com/) - Serverless Functions Made Simple for Docker and Kubernetes.
 * [Pulumi](https://pulumi.io) - A cloud development platform for serverless, containers, infrastructure. Multi-cloud (and Kubernetes) and works with JS, TS, Python, Go
-* [Python-λ](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying serverless Python code in AWS Lambda
+* [Python-λ](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying serverless Python code in AWS Lambda.
 * [Serverless Framework](http://www.serverless.com) - Build and maintain web, mobile and IoT applications running on AWS Lambda, Azure Cloud Functions, IBM OpenWhisk, and Google Cloud Functions (formerly known as JAWS).
-* [Shep](https://github.com/bustlelabs/shep) - A framework for building APIs using AWS API Gateway and Lambda
-* [Sigma](https://sigma.slappforge.com) - An all-in-one, browser-based IDE toolkit for drag-n-drop composing, testing and deploying of serverless applications, with fully automated configuration management
+* [Serverless Compose](https://github.com/DavidJFelix/serverless-compose) - A lightweight, functional, composable, middleware framework for AWS lambda that stays out of the way.
+* [Shep](https://github.com/bustlelabs/shep) - A framework for building APIs using AWS API Gateway and Lambda.
+* [Sigma](https://sigma.slappforge.com) - An all-in-one, browser-based IDE toolkit for drag-n-drop composing, testing and deploying of serverless applications, with fully automated configuration management.
 * [Sparta](http://gosparta.io) - A framework that transforms a Go application into an AWS Lambda powered microservice.
 * [SAM Local](https://github.com/awslabs/aws-sam-local) - Is the AWS CLI tool for managing Serverless applications written with [AWS Serverless Application Model (SAM)](https://github.com/awslabs/serverless-application-model)
-* [Turtle](https://github.com/iopipe/turtle/) - library for building functional and actor-driven NodeJS apps on Lambda
+* [Turtle](https://github.com/iopipe/turtle/) - library for building functional and actor-driven NodeJS apps on Lambda.
 * [Zappa](https://github.com/Miserlou/Zappa) - Serverless Python WSGI with AWS Lambda + API Gateway.
 * [λambdify](http://zhukovalexander.github.io/lambdify) - AWS Lambda automation and integration for Python
 * [Squeezer Framework](https://squeezer.io) - Event-driven APIs & Web apps on microservices, serverless.
-* [Spring Cloud Function](https://github.com/spring-cloud/spring-cloud-function) - Java framework for doing Functions using Spring ecosystem
-* [Fission Workflows](https://github.com/fission/fission-workflows) - Fast workflow-based function composition for serverless functions
-* [azure-functions-express](https://github.com/yvele/azure-function-express) - Allows Express.js usage with Azure Functions
+* [Spring Cloud Function](https://github.com/spring-cloud/spring-cloud-function) - Java framework for doing Functions using Spring ecosystem.
+* [Fission Workflows](https://github.com/fission/fission-workflows) - Fast workflow-based function composition for serverless functions.
+* [azure-functions-express](https://github.com/yvele/azure-function-express) - Allows Express.js usage with Azure Functions.
 * [Riff](https://projectriff.io/) - Kubernetes based serverless framework supporting multiple languages.
+* [FuseLess](https://fuseless.org/) - toolkit for running functions written in CFML (ColdFusion Markup Language) on AWS Lambda.
 
 ### Security
 
 * [PureSec](https://www.puresec.io) - Enabling Secure and Reliable Serverless Applications.
 * [Serverless Security Top 10 Guide](https://github.com/puresec/sas-top-10) - The Ten Most Critical Risks for Serverless Applications.
+* [AWS Lambda Security Best-Practices eBook](https://www.puresec.io/aws-lambda-security-best-practices) - An AWS Lambda security best-practices eBook
 * [AWS Lambda Security Quick-Start Guide](https://www.puresec.io/blog/aws-lambda-security-quick-guide) - A Quick-Start guide for AWS Lambda Security
 * [AWS Security Best Practices: Config Rules for AWS Lambda Security](https://www.puresec.io/blog/aws-security-best-practices-config-rules-lambda-security) - A guide on how to use AWS Config rules for governing and securing your Lambda functions, with a free set of 4 open source rules developed in SAM.
 * [Using AWS CloudTrail to enhance your serverless application security](https://serverless.com/blog/cloudtrail-security) - A guide on how to use CloudTrail to improve AWS Lambda security posture.
+* [OWASP ServerlessGoat](https://www.owasp.org/index.php/OWASP_Serverless_Goat) - OWASP ServerlessGoat is a deliberately insecure realistic AWS Lambda serverless application, maintained by OWASP and contributed by PureSec. Install ServerlessGoat and learn about the vulnerabilities, how to exploit them, and how to remediate each issue. Installation is just a 1-click through the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:761130837472:applications~serverless-goat)
+* [Awesome-Serverless-Security](https://github.com/puresec/awesome-serverless-security/) - A curated list of awesome serverless security resources such as (e)books, articles, whitepapers, blogs and research papers.
 * [Protego](https://www.protego.io) - your apps became serverless. Your security also need to be serverless too.
+* [Nuweba](https://www.nuweba.com) - Unified solution for serverless security, monitoring and performance.
 
 ### CI/CD
 
 * [seed.run](https://seed.run) - Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.
+* [AWS Lambda Test Runner](https://github.com/automatictester/lambda-test-runner) - Run your unit tests with Maven or SBT directly on AWS Lambda.
 
 ### Cost calculators
 
@@ -170,9 +186,9 @@ https://www.quora.com/What-is-serverless-computing
 ### Payments
 * [Stripe Webtask](https://github.com/auth0/webtask-scripts/tree/master/stripe) - Accept Stripe payments without a backend using Webtasks.
 * [Stripe Serverless webhook](https://github.com/eahefnawy/serverless-stripe-webhook) - Serverless Module that creates a webhook for Stripe.
-* [Stripe Lambda function](https://github.com/TaylorBriggs/stripe-lambda) - A Lambda function for charging cards with Stripe
+* [Stripe Lambda function](https://github.com/TaylorBriggs/stripe-lambda) - A Lambda function for charging cards with Stripe.
 <!---* [check digit](http://chkdgt.com) - -->
-* [GCF-Stripe](https://github.com/rldaulton/GCF-Stripe) - serverless use of Stripe over Google Cloud Functions
+* [GCF-Stripe](https://github.com/rldaulton/GCF-Stripe) - serverless use of Stripe over Google Cloud Functions.
 
 ### eCommerce
 * [Snipcart](https://snipcart.com) - Fully customizable, HTML and JavaScript-based shopping cart for any website.
@@ -181,7 +197,9 @@ https://www.quora.com/What-is-serverless-computing
 
 ### Content Management Systems
 * [Contentful](https://www.contentful.com/) - A content infrastructure that enables teams to power content in any digital product via a RESTful API.
+* [Cosmicjs](https://cosmicjs.com) - API-first CMS for building content-powered apps in any programming language.
 * [Lesspod](https://www.lesspod.org/) - The opensource Serverless CMS (web + blog engine) built with vue 2.0, SQLite (localy only) and deployable to Firebase (and more in future).
+* [Sanity](https://sanity.io) - A hosted backend for structured content with a real-time API, globally distributed CDN, and a powerful, but simple query language.
 * [Storyblok](https://www.storyblok.com/) - API based & Headless CMS - Clean and structured JSON for you as developer and a CMS your editors will fall in love with. Unlimited extensibility through custom plugins.
 * [TakeShape](https://www.takeshape.io/) - Content-as-a-Service via a powerful GraphQL API and integrated SSG for teams that want to stay focused on their product.
 * [Tipe](https://tipe.io/) - Next generation serverless CMS. Create your content with powerful editing tools and access it from anywhere with a GraphQL or REST API.
@@ -200,12 +218,13 @@ https://www.quora.com/What-is-serverless-computing
 * [Pageclip](https://pageclip.co/) - A Server for your HTML Forms - Collect info from users without a server—Pageclip is your server. Lead capture forms, surveys, newsletter forms, contact forms, etc. Setup any form in seconds.
 * [Typeform](https://www.typeform.com/) - Pretty, intuitive, slick forms for almost any use.
 
-### Image management and File storage
+### Media management and File storage
 * [Filestack](https://www.filestack.com) - Image management system with Filestack - upload files, transform images, videos, and documents, store content and deliver fast via CDN.
 * [Kloudless](https://kloudless.com) - Integrate with one, universal API and connect to many file storage and CRM services.
-* [Uploadcare](https://uploadcare.com) - HTML5 widget, API to manage files in cloud storage, smart and fast CDN to deliver them to your end users. Crop, resize and transform uploaded images using URL commands.
-* [ReSRC.it](https://www.resrc.it/) - The Responsive Image Service that delivers brilliantly optimized, pixel perfect images to any device.
 * [Letter Avatar](https://github.com/kevincolemaninc/letter-avatar-serverless) - Generates Google-like binary avatar images
+* [Mux](https://mux.com) - Streaming video infrastructure for developers. Add a live stream or upload a video file, then get thumbnails, animated gifs and more via simple API calls.
+* [ReSRC.it](https://www.resrc.it/) - The Responsive Image Service that delivers brilliantly optimized, pixel perfect images to any device.
+* [Uploadcare](https://uploadcare.com) - HTML5 widget, API to manage files in cloud storage, smart and fast CDN to deliver them to your end users. Crop, resize and transform uploaded images using URL commands.
 
 ### Realtime
 * [Ably](https://www.ably.io/) - Global distributed realtime data delivery platform with pub/sub, presence, device awareness, history, connection state recovery, authentication and encryption.
@@ -243,7 +262,7 @@ https://www.quora.com/What-is-serverless-computing
 * [Cloudant](https://cloudant.com/) - Based on the Apache-backed CouchDB, Cloudant is the distributed database as a service (DBaaS) built from the ground up to deliver fast-growing application data to the edge.
 * [Azure CosmosDB](https://azure.microsoft.com/en-us/services/cosmos-db/) - Globally distributed, multi-model database service
 * [Cube.js](https://github.com/statsbotco/cubejs-client) - Hosted analytics platform for serverless apps.
-
+* [Google Cloud Datastore](https://cloud.google.com/datastore/) - Hosted NoSQL database service by Google
 
 ### Others
 * [Azure Function Library](http://functionlibrary.azurewebsites.net) - An open source set of common use cases for Azure Functions that are ready to deploy!
@@ -257,6 +276,7 @@ https://www.quora.com/What-is-serverless-computing
 * [faas](https://github.com/alexellis/faas) - Run Docker containers as functions on Swarm Mode ([blog post](http://blog.alexellis.io/functions-as-a-service/))
 * [FunctionCI](https://github.com/rgfindl/functionci) - Continuous Integration for AWS Lambdas.
 * [gofn](https://github.com/nuveo/gofn) - Go package for function process via container provider (serverless minimalist)
+* [kube-fledged](https://github.com/senthilrch/kube-fledged) - A K8S add-on for creating and managing a cache of container images directly on cluster worker nodes
 * [Lambda Comments](https://github.com/jimpick/lambda-comments) - Blog commenting system built with AWS Lambda
 * [LambCI](https://github.com/lambci/lambci) - A continuous integration system built on AWS Lambda
 * [LambStatus](https://github.com/ks888/LambStatus) - A status page system built on AWS Lambda ([demo](https://lambstatus.github.io/demo-status/))
@@ -298,12 +318,14 @@ https://www.quora.com/What-is-serverless-computing
 * [Serverless Architectures on AWS](https://www.manning.com/books/serverless-architectures-on-aws). Teaches you how to build, secure and manage serverless architectures that can power the most demanding web and mobile apps. Written by Peter Sbarski
 * [Building Serverless Architectures](https://www.amazon.co.uk/Building-Serverless-Architectures-Cagatay-Gurturk/dp/1787129195) Book about building serverless applications  in JAVA.
 * [AWS Lambda in Action](https://www.manning.com/books/aws-lambda-in-action) An example-driven tutorial that teaches you how to build applications that use an event-driven approach on the back end.
-* [Serverless Apps with Node and Claudia.js](https://www.manning.com/books/serverless-apps-with-node-and-claudiajs) A book that walks you through building serverless apps on AWS using Node.js and Claudia.js. (early access)
+* [Serverless Applications with Node.js](https://www.manning.com/books/serverless-apps-with-node-and-claudiajs) A book that walks you through building serverless apps on AWS using Node.js and Claudia.js.
 * [Agile Development for Serverless Platforms](https://www.manning.com/books/agile-development-for-serverless-platforms) free eBook: how to apply Agile practices in fully serverless architectures.
 * [Cloud Native Applications](https://www.manning.com/books/cloud-native-applications) free eBook: an introduction into the world of cloud computing and insights into what is possible with cloud services.
 * [Exploring Cloud Computing](https://www.manning.com/books/exploring-cloud-computing) free eBook: an introduction to the two most popular cloud providers, Amazon and Google, and insights to help you get started.
 * [Developing Serverless Applications - A Practical Introduction with Apache OpenWhisk](http://www.oreilly.com/programming/free/developing-serverless-applications.csp) free ebook focused on doing serverless with OpenWhisk.
 * [Docker in Action, Second Edition](https://www.manning.com/books/docker-in-action-second-edition) A book that teaches you the skills and knowledge you need to create, deploy, and manage applications hosted in Docker containers and it has been fully updated with new examples, best practices, and entirely new chapters.
+* [Docker in Practice, Second Edition](https://www.manning.com/books/docker-in-practice-second-edition) A book that teaches rock-solid, tested Docker techniques, enabling microservices architecture, efficient network modeling, offline productivity, and establishing a container-driven continuous delivery process.
+
 ### Courses
 * [Serverless JavaScript by Example](https://www.packtpub.com/web-development/serverless-javascript-example-video) - Become dexterous with live demonstrations on serverless web development.
 * [AWS Lambda in Motion](https://www.manning.com/livevideo/aws-lambda-in-motion) - An example-driven tutorial that focuses on helping you understand and tackle the operational challenges with running AWS Lambda in production.
